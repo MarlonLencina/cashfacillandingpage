@@ -18,7 +18,7 @@
         align-items: center;
         padding: 112px 20px;
         
-        @media (min-width: 640px){
+        @media (min-width: 940px){
             flex-direction: row;
             justify-content: space-between;
         }
@@ -26,11 +26,79 @@
 
 
     &__left {
-        margin-right: 65px;
+
+        position: relative;
         >img {
-            @media (max-width: 960px) {
+            @media (max-width: 940px) {
                 max-width: 100%;
             }
+        }
+
+        @media (min-width: 940px){
+            margin-right: 65px;
+        }
+
+        .rateBadge {
+            position: absolute;
+
+            width: 232px;
+            border-radius: 12px;
+            padding: 24px 16px;
+            display: flex;
+            flex-direction: column;
+            color: var(--white);
+            backdrop-filter: blur(6px);
+            background-color: rgb(32, 32, 32, 0.7);
+
+            animation-duration: 2s;
+            animation-name: upAndDownAnimation;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+
+            top: 0;
+            right: 0;
+
+            @media (min-width: 940px){
+                bottom: 180px;
+                left: -60px;
+
+            top: unset;
+            right: unset;
+
+            }
+
+            strong {
+                font-weight: 900;
+                font-size: 16px;
+            }
+
+            div {
+                margin-top: 8px;
+                display: flex;
+                justify-content: space-between;
+
+
+            strong {
+                font-weight: 900;
+                font-size: 16px;
+            }
+            }
+        }
+
+        @keyframes upAndDownAnimation {
+
+            from {
+                transform: translateY(0);
+            }
+    
+            50% {
+                transform: translateY(10px);
+            }
+    
+            to {
+                transform: translateY(0);
+            }
+    
         }
     }
 
@@ -54,7 +122,7 @@
             max-width: 416px;
             margin-top: 48px;
 
-            @media (min-width: 640px){
+            @media (min-width: 940px){
                 margin-top: 0;
             }
         }

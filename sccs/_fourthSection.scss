@@ -6,8 +6,13 @@
 
     &__background {
         position: absolute;
-        right: 0px;
+        right: 0;
         top: 120px;
+        z-index: 1;
+
+        @media (max-width: 500px){
+            display: none;
+        }
     }
 
     &__container {
@@ -19,7 +24,7 @@
         justify-content: space-between;
         flex-direction: column;
 
-        @media (min-width: 640px){
+        @media (min-width: 940px){
             flex-direction: row;
 
         }
@@ -29,13 +34,30 @@
 
     &__left {
 
-        img {
-            max-width: 100%;
-            margin-bottom: 48px;
+        .image {
 
-            @media (min-width: 640px){
-                margin-bottom: 0;
+            position: relative;
+            
+            img {
+                max-width: 100%;
+                margin-bottom: 48px;
+                z-index: 5;
+
+                @media (min-width: 940px){
+                    margin-bottom: 0;
+                }
             }
+
+            .rateBadge {
+                position: absolute;
+                bottom: 9;
+                background-color: red;
+                width: 232px;
+                height: 80px;
+                border-radius: 12px;
+            }
+
+
         }
 
         .title {
@@ -43,6 +65,7 @@
             display: flex;
             flex-direction: column;
             max-width: 488px;
+            z-index: 5;
 
 
             strong {

@@ -21,7 +21,7 @@ body {
 .button {
   width: 304px;
   height: 70px;
-  background-color: var(--darkGreen);
+  background-color: #64F607;
   border-radius: 4px;
 }
 .button a {
@@ -81,30 +81,139 @@ body {
   font-weight: 300;
 }
 .main {
-  background-image: url("../assets/backFirst.svg");
+  /* background-image: url('../assets/backFirst.svg');
   background-size: cover;
-  background-repeat: no-repeat;
-  padding: 130px 20px 50px;
+  background-repeat: no-repeat; */
+  padding: 130px 0 0;
+  position: relative;
+  background-color: #D5D0D4;
+}
+.main .moneyGreenBadge {
+  position: absolute;
+  bottom: 120px;
+  right: 500px;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: upAndDownAnimation;
+          animation-name: upAndDownAnimation;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  display: none;
+}
+@media (min-width: 1100px) {
+  .main .moneyGreenBadge {
+    display: unset;
+  }
+}
+.main .moneyBlackBadge {
+  position: absolute;
+  bottom: 120px;
+  right: 160px;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: upAndDownAnimation;
+          animation-name: upAndDownAnimation;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  display: none;
+}
+@media (min-width: 1100px) {
+  .main .moneyBlackBadge {
+    display: unset;
+  }
+}
+@-webkit-keyframes upAndDownAnimation {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes upAndDownAnimation {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@media (min-width: 940px) {
+  .main {
+    padding: 130px 20px 130px;
+  }
 }
 @media (min-width: 840px) {
   .main {
-    background-position: right 35% bottom 40%;
+    background-position: right 35% top 0%;
   }
 }
 .main__container {
   max-width: 1216px;
   margin: 0 auto;
-  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 1100px) {
+  .main__container {
+    flex-direction: row;
+  }
 }
 .main__left {
-  padding-top: 75px;
-  padding-bottom: 130px;
+  padding: 100px 20px 0px;
+}
+.main__right {
+  display: none;
+}
+@media (min-width: 1100px) {
+  .main__right {
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    display: unset;
+  }
+}
+@media (max-width: 640px) {
+  .main__right .img {
+    display: none;
+  }
+}
+.main__right__mobile {
+  background-image: url("../assets/backFirstMobile.svg");
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  z-index: 2;
+}
+@media (min-width: 940px) {
+  .main__right__mobile {
+    display: none;
+  }
 }
 .main .title {
   font-size: 48px;
   font-weight: 900;
-  max-width: 584px;
   margin-bottom: 37px;
+  z-index: 10;
+  max-width: 400px;
+}
+@media (min-width: 1400px) {
+  .main .title {
+    max-width: 584px;
+  }
 }
 .main .text {
   font-size: 18px;
@@ -131,18 +240,77 @@ body {
   align-items: center;
   padding: 112px 20px;
 }
-@media (min-width: 640px) {
+@media (min-width: 940px) {
   .benefits__wrapper {
     flex-direction: row;
     justify-content: space-between;
   }
 }
 .benefits__left {
-  margin-right: 65px;
+  position: relative;
 }
-@media (max-width: 960px) {
+@media (max-width: 940px) {
   .benefits__left > img {
     max-width: 100%;
+  }
+}
+@media (min-width: 940px) {
+  .benefits__left {
+    margin-right: 65px;
+  }
+}
+.benefits__left .rateBadge {
+  position: absolute;
+  width: 232px;
+  border-radius: 12px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  background-color: rgba(32, 32, 32, 0.7);
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: upAndDownAnimation;
+          animation-name: upAndDownAnimation;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  top: 0;
+  right: 0;
+}
+@media (min-width: 940px) {
+  .benefits__left .rateBadge {
+    bottom: 180px;
+    left: -60px;
+    top: unset;
+    right: unset;
+  }
+}
+.benefits__left .rateBadge strong {
+  font-weight: 900;
+  font-size: 16px;
+}
+.benefits__left .rateBadge div {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.benefits__left .rateBadge div strong {
+  font-weight: 900;
+  font-size: 16px;
+}
+@keyframes upAndDownAnimation {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0);
   }
 }
 .benefits__right {
@@ -161,7 +329,7 @@ body {
   max-width: 416px;
   margin-top: 48px;
 }
-@media (min-width: 640px) {
+@media (min-width: 940px) {
   .benefits__title strong {
     margin-top: 0;
   }
@@ -286,8 +454,14 @@ body {
 }
 .requirements__background {
   position: absolute;
-  right: 0px;
+  right: 0;
   top: 120px;
+  z-index: 1;
+}
+@media (max-width: 500px) {
+  .requirements__background {
+    display: none;
+  }
 }
 .requirements__container {
   max-width: 1216px;
@@ -297,25 +471,38 @@ body {
   justify-content: space-between;
   flex-direction: column;
 }
-@media (min-width: 640px) {
+@media (min-width: 940px) {
   .requirements__container {
     flex-direction: row;
   }
 }
-.requirements__left img {
+.requirements__left .image {
+  position: relative;
+}
+.requirements__left .image img {
   max-width: 100%;
   margin-bottom: 48px;
+  z-index: 5;
 }
-@media (min-width: 640px) {
-  .requirements__left img {
+@media (min-width: 940px) {
+  .requirements__left .image img {
     margin-bottom: 0;
   }
+}
+.requirements__left .image .rateBadge {
+  position: absolute;
+  bottom: 9;
+  background-color: red;
+  width: 232px;
+  height: 80px;
+  border-radius: 12px;
 }
 .requirements__left .title {
   margin-bottom: 12px;
   display: flex;
   flex-direction: column;
   max-width: 488px;
+  z-index: 5;
 }
 .requirements__left .title strong {
   font-size: 40px;
@@ -444,7 +631,7 @@ body {
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
 }
-@media (min-width: 1216px) {
+@media (min-width: 1182px) {
   .header__links {
     width: 90%;
     flex-direction: row;
@@ -468,7 +655,7 @@ body {
 .header__button {
   color: #000;
   text-decoration: none;
-  background-color: var(--lightGreen);
+  background-color: #64F607;
   font-size: 16px;
   font-weight: 800;
   font-size: 16px;
@@ -515,6 +702,12 @@ body {
   font-size: 42px;
   color: var(--white);
   font-weight: 900;
+  text-align: center;
+}
+@media (min-width: 640px) {
+  .FAQ__title strong {
+    text-align: unset;
+  }
 }
 .FAQ__title::after {
   content: "";
@@ -703,7 +896,16 @@ footer .section__text {
   border-radius: 4px 0 0 4px;
   flex: 1;
   border-style: none;
-  font-weight: 500;
+  font-weight: 700;
+}
+.fgts__button div input::-moz-placeholder {
+  font-weight: 700;
+}
+.fgts__button div input:-ms-input-placeholder {
+  font-weight: 700;
+}
+.fgts__button div input::placeholder {
+  font-weight: 700;
 }
 @media (min-width: 920px) {
   .fgts__button div {
@@ -756,7 +958,6 @@ footer .section__text {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: var(--lightGreen);
   margin-right: 16px;
 }
 .rate__card__header .info {
@@ -782,7 +983,7 @@ footer .section__text {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 640px) {
+@media (min-width: 940px) {
   .rate__header__info {
     flex-direction: row;
   }
@@ -796,7 +997,7 @@ footer .section__text {
   font-weight: 900;
   margin-top: 32px;
 }
-@media (min-width: 640px) {
+@media (min-width: 940px) {
   .rate__header__info strong {
     margin-left: 32px;
     margin-top: 0;

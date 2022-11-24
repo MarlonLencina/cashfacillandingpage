@@ -95,7 +95,7 @@
         padding: 0; /* Remove padding */
         margin: 0; /* Remove margins */
 
-        @media (min-width: 1216px){
+        @media (min-width: 1182px){
             width: 90%;
             flex-direction: row;
         }
@@ -126,10 +126,11 @@
 
     }
 
+
     &__button {
         color: #000;
         text-decoration: none;
-        background-color: var(--lightGreen);
+        background-color: #64F607;
         font-size: 16px;
         font-weight: 800;
         font-size: 16px;
