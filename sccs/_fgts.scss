@@ -48,17 +48,22 @@
                 border-radius: 4px 0 0 4px;
                 flex: 1;
                 border-style: none;
-                font-weight: 700;
+                font-weight: 500;
                 text-decoration: none;
                 color: #000;
 
                 &::placeholder {
-                    font-weight: 700;
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: #9B9DA4;
                 }
+
+
             }
 
             @media (min-width: 920px){
                 width: 312px;
+                font-weight: 700;
             }
         }
 
@@ -67,12 +72,13 @@
             cursor: pointer;
             height: 48px;
             width: 176px;
-            background-color: var(--lightGreen);
+            background-color: #64F607;
             font-size: 16px;
             font-weight: 900;
             border-style: none;
             text-decoration: none;
             color: #000;
+            line-height: 24px;
         }
 
     }

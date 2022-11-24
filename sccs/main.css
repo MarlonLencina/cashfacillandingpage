@@ -902,22 +902,29 @@ footer .section__text {
   border-radius: 4px 0 0 4px;
   flex: 1;
   border-style: none;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
   color: #000;
 }
 .fgts__button div input::-moz-placeholder {
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 16px;
+  color: #9B9DA4;
 }
 .fgts__button div input:-ms-input-placeholder {
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 16px;
+  color: #9B9DA4;
 }
 .fgts__button div input::placeholder {
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 16px;
+  color: #9B9DA4;
 }
 @media (min-width: 920px) {
   .fgts__button div {
     width: 312px;
+    font-weight: 700;
   }
 }
 .fgts__button button {
@@ -925,12 +932,13 @@ footer .section__text {
   cursor: pointer;
   height: 48px;
   width: 176px;
-  background-color: var(--lightGreen);
+  background-color: #64F607;
   font-size: 16px;
   font-weight: 900;
   border-style: none;
   text-decoration: none;
   color: #000;
+  line-height: 24px;
 }
 
 .rate {
