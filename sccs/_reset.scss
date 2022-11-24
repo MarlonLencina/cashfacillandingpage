@@ -1,0 +1,27 @@
+
+  
+  body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    background-color: var(--darkGray);
+
+    font-family: finalSix, sans-serif;
+
+    list-style: none;
+  }
+
+
+  :root {
+    --black: #0C0C0C;
+
+    --darkGray: #202020;
+    --mediumGray: #9b9da4;
+    --lightGray: #e4e8f2;
+    --white: #ffffff;
+
+    --darkGreen: #50c606;
+    --vividGreen: #64f607;
+    --lightGreen: #8ff94d;
+}

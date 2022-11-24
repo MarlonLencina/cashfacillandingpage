@@ -1,0 +1,39 @@
+.main {
+    background-image: url('../assets/backFirst.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 130px 20px 50px;
+
+    @media (min-width: 840px){
+    background-position: right 35% bottom 40%;
+
+    }
+
+    &__container {
+        max-width: 1216px;
+        margin: 0 auto;
+        
+        position: relative;
+    }
+
+
+    &__left {
+        padding-top: 75px;
+        padding-bottom: 130px;
+    }
+
+    .title {
+        font-size: 48px;
+        font-weight: 900;
+        max-width: 584px;
+        margin-bottom: 37px;
+    }
+
+    .text {
+        font-size: 18px;
+        font-weight: 400;
+        max-width: 352px;
+        margin-bottom: 48px;
+    }
+
+}

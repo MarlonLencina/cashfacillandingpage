@@ -1,0 +1,30 @@
+.button {
+    width: 304px;
+    height: 70px;
+    background-color: var(--darkGreen);
+    border-radius: 4px;
+
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 22px;
+        font-weight: 900;
+        text-decoration: none;
+
+        p {
+            margin-right: 15px;
+            color: #000;
+        }
+
+        img {
+            fill:  #202020;
+        }
+    }
+
+    @media (max-width: 640px){
+        width: 100%;
+    }
+}

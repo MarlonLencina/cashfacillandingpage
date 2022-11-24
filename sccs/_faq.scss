@@ -1,0 +1,111 @@
+.FAQ {
+
+    width: 100%;
+    background-color: var(--darkGray);
+    padding-top: 118px;
+    padding-bottom: 56px;
+    position: relative;
+
+
+
+    &__container {
+        max-width: 1216px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 20px 60px 20px;
+    }
+
+
+    &__title {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            margin-bottom: 24px;
+        }
+
+        strong {
+            font-size: 42px;
+            color: var(--white);
+            font-weight: 900;
+        }
+
+        &::after {
+            content: '';
+            margin-top: 16px;
+            width: 51px;
+            height: 2px;
+            background-color: var(--vividGreen);
+        }
+    }
+
+}
+
+.accordion {
+
+    max-width: 100%;
+    margin-top: 42px;
+    margin-bottom: 69px;
+    transition: all 0.6s ease-out;
+
+    @media (min-width: 640px){
+        width: 780px;
+    }
+
+
+    &__card {
+
+        width: 100%;
+        cursor: pointer;
+
+
+        &__header {
+            width: 100%;
+            display: flex;
+            padding: 32px 0;
+
+            .number {
+                margin-right: 32px;
+                color: var(--lightGreen);
+            }
+
+            .content {
+                flex: 1;
+                display: flex;
+                justify-content: space-between;
+
+                strong {
+                    color: var(--white);
+                }
+            }
+        }
+
+
+        &__content {
+            margin-left: 58px;
+            color: var(--white);
+            font-size: 14px;
+            line-height: 24px;
+
+
+            max-height: 0;
+            overflow: hidden;
+            transition: all .2s;
+
+
+            // display: none;
+        }
+    }
+
+    .active {
+        max-height: 150px;
+
+    }
+
+
+}
+

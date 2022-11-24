@@ -1,0 +1,127 @@
+footer {
+
+    background-color: var(--black);
+
+    .footer__container {
+        max-width: 1216px;
+        margin: 0 auto;
+        padding: 68px 20px 20px;
+
+        .allRights {
+            font-size: 14;
+            font-size: 500;
+            color: #E4E8F2;
+            margin-top: 120px;
+        }
+
+    .description {
+
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #9B9DA4;
+        text-align: justify;
+        margin-top: 41px;
+    }
+    
+
+    }
+
+    .footer__fixed {
+
+        > a + a {
+            margin-left: 28px;
+        }
+    }
+
+    .section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    .section__options {
+        flex: 1;
+        display: flex;
+        gap: 28px;
+        flex-wrap: wrap;
+
+
+
+        >div {
+            @media (min-width: 720px) {
+                margin-left: 64px;
+                margin-top: 0px;
+                width: auto;
+            }
+        }
+    }
+
+    .section__title {
+        text-decoration: none;
+        color: var(--vividGreen);
+        font-size: 18px;
+        margin-bottom: 28px;
+    }
+
+    .follow_us {
+
+        div {
+            display: flex;
+            align-items: center;
+
+            > a {
+                & + a {
+                    margin-left: 24px;
+                }
+            }
+        }
+    }
+
+    .about__us {
+
+        >p {
+            max-width: 384px;
+            text-decoration: none;
+            color: var(--white);
+            font-size: 16px;
+            margin-top: 32px;
+            text-align: left;
+        }
+
+        >h2 {
+            text-decoration: none;
+            color: var(--white);
+            font-size: 18px;
+        }
+    }
+
+    .section__item {
+        text-decoration: none;
+        color: var(--white);
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+
+        >img {
+            margin-right: 12px;
+        }
+
+        &+a {
+            margin-top: 10px;
+        }
+    }
+
+    .section__text {
+        margin-top: 32px;
+        font-size: 14px;
+        color: var(--white);
+        font-weight: var(--regular);
+        line-height: 22px;
+        text-align: justify;
+    }
+
+
+
+
+}

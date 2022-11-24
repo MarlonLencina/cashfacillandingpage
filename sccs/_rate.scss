@@ -1,0 +1,102 @@
+.rate {
+
+    background-color: var(--black);
+    background-image: url('./../assets/backgroundList.svg');
+    background-size: cover;
+    padding: 205px 0 90px 0px;
+
+    .slider {
+        padding: 0 0 0 20px;
+    }
+
+    &__container {
+        max-width: 1216px;
+        margin: 0 auto;
+    }
+
+    &__card {
+        background-color: var(--white);
+        height: 272px;
+        max-width: 384px;
+        border-radius: 18px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        
+        &__content {
+            font-size: 16px;
+            color: var(--mediumGray);
+            line-height: 28px;
+        }
+
+        &__header {
+            display: flex;
+            margin-bottom: 24px;   
+
+            .icon {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background-color: var(--lightGreen);
+                margin-right: 16px;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    width: 88px;
+                }
+
+                strong {
+                    font-weight: 700;
+                    font-size: 18px;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        margin-bottom: 84px;
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            @media (min-width: 640px){
+                flex-direction: row;
+            }
+
+            .photos {
+                max-width: 145px;
+            }
+
+            strong {
+                color: var(--white);
+                font-size: 40px;
+                font-weight: 900;
+                margin-top: 32px;
+                
+                @media (min-width: 640px){
+                    margin-left: 32px;
+                    margin-top: 0;
+
+                }
+            }
+        }
+
+        &__nav {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+    }
+
+}
+
