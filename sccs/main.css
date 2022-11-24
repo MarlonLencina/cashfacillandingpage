@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -885,6 +889,8 @@ footer .section__text {
 .fgts__button {
   display: flex;
   max-width: 100%;
+  text-decoration: none;
+  color: #000;
 }
 .fgts__button div {
   display: flex;
@@ -897,6 +903,8 @@ footer .section__text {
   flex: 1;
   border-style: none;
   font-weight: 700;
+  text-decoration: none;
+  color: #000;
 }
 .fgts__button div input::-moz-placeholder {
   font-weight: 700;
@@ -921,6 +929,8 @@ footer .section__text {
   font-size: 16px;
   font-weight: 900;
   border-style: none;
+  text-decoration: none;
+  color: #000;
 }
 
 .rate {
